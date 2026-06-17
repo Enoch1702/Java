@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class diffdiagonal
+public class transposeequalmatrix
 {
     public static void main(String args[])
     {
@@ -15,21 +15,23 @@ public class diffdiagonal
                 a[i][j] = sc.nextInt();
             }
         }
-        int p = 0;
-        int s = 0;
+        int flag=0;
         for(int i=0;i<size;i++)
         {
-            p = p + a[i][i];
-            s = s + a[i][size-1-i];
+            for(int j=0;j<size;j++)
+            {
+                if(a[i][j]!=a[j][i]){
+                    flag=1;
+                    break;
+                }
+            }
         }
-        int d = p - s;
-        if(d < 0)
-        {
-            System.out.println(-d);
+        if(flag==0){
+            System.out.println("Matrix is equals to its Transpose");
         }
-        else
-        {
-            System.out.println(d);
+        else{
+            System.out.println("Not Equal");
         }
+
     }
 }

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class diffdiagonal
+public class rotatethematrix90
 {
     public static void main(String args[])
     {
@@ -15,21 +15,13 @@ public class diffdiagonal
                 a[i][j] = sc.nextInt();
             }
         }
-        int p = 0;
-        int s = 0;
-        for(int i=0;i<size;i++)
+        for(int j=0;j<size;j++)
         {
-            p = p + a[i][i];
-            s = s + a[i][size-1-i];
-        }
-        int d = p - s;
-        if(d < 0)
-        {
-            System.out.println(-d);
-        }
-        else
-        {
-            System.out.println(d);
+            for(int i=size-1;i>=0;i--)
+            {
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println("");
         }
     }
 }
