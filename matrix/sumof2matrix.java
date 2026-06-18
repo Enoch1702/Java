@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class sumofmatrix{
+public class sumof2matrix{
     public static void main(String args[]){
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter the size of the array (row and column) : ");
