@@ -14,14 +14,17 @@ public class boundaryelement
                 a[i][j]=sc.nextInt();
             }
         }
-        for(int i=0;i<r;i++){
-            System.out.print(a[0][i]);
+        for(int i=0;i<c;i++){
+            System.out.print(a[0][i]+" ");
         }
         for(int i=1;i<r;i++){
-            System.out.print(a[i][c-1]);
+            System.out.print(a[i][c-1]+" ");
         }
-        for(int i=r-1;i<c;i++){
-            System.out.print(a[i][i]);
+        for(int i=c-2;i>=0;i--){
+            System.out.print(a[r-1][i]+" ");
+        }
+        for(int i=r-2;i>0;i--){
+            System.out.print(a[i][0]+" ");
         }
     }
 }
