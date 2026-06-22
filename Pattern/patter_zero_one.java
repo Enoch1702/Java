@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class patter_0s_1s
+public class patter_zero_one
 {
     public static void main(String[] args)
     {
