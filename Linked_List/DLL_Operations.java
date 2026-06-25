@@ -60,7 +60,7 @@ public class DLL_Operations{
             System.out.print(temp.data+" <-> ");
             temp=temp.prev;
         } 
-        System.out.println("null\n");
+        System.out.println("null");
     }
     void disp(){
         Node temp=head;
@@ -68,7 +68,7 @@ public class DLL_Operations{
             System.out.print(temp.data+" <-> ");
             temp=temp.next;
         }
-        System.out.println("null\n");
+        System.out.println("null");
     }
     public static void main(String[] args) {
         DLL_Operations obj=new DLL_Operations();
