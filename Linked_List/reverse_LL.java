@@ -27,7 +27,7 @@ public class reverse_LL{
         newNode.next=head;
         head=newNode;
     }
-    void dispback(){
+    void dispreverse(){
         Node temp=head;
         int c=0;
         while(temp!=null){
@@ -43,8 +43,33 @@ public class reverse_LL{
         for(int i=a.length-1;i>=0;i--){
             System.out.print(a[i]+" --> ");
         }
-        System.out.println("null");
+        System.out.print("null\n");
 
+    }
+    void palindrome(){
+        Node temp=head;
+        int c=0;
+        while(temp!=null){
+            c++;
+            temp=temp.next;
+        }
+        temp=head;
+        int a[]=new int[c];
+        for(int i=0;i<c;i++){
+            a[i]=temp.data;
+            temp=temp.next;
+        }
+        int start=0;
+        int end=a.length-1;
+        String check="Palindrome";
+        while(start<end){
+            if(a[start]!=a[end]){
+                check="Not Palindrome";
+            }
+            start++;
+            end--;
+        }
+        System.out.println(check);
     }
     void disp(){
         Node temp=head;
@@ -62,6 +87,7 @@ public class reverse_LL{
             obj.insertfront(40);
             obj.insertfront(50);
             obj.disp();
-            obj.dispback();
+            obj.dispreverse();
+            obj.palindrome();
     }
 }

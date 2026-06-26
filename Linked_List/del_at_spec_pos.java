@@ -37,11 +37,11 @@ public class del_at_spec_pos{
         }
         else{
             Node temp=head;
-            for(int i=1;i<pos-1&&temp!=null;i++){
+            for(int i=1;i<pos-1&&temp.next!=null;i++){
                 temp=temp.next;
             }
             temp.next=temp.next.next;
-            if(temp==null){
+            if(temp.next==null){
                 System.out.println("Invalid Position");
             }
 

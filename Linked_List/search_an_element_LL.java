@@ -32,7 +32,7 @@ public class search_an_element_LL
         Node temp=head;
         while(temp.next!=null){
             if(temp.data==target){
-
+                
             }
         }
     }
