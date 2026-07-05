@@ -1,10 +1,10 @@
 import java.util.Scanner;
-public class stack_creation
+public class stack_operations
 {
     int size;
     int stack[];
     int top=-1;
-    stack_creation(int size){
+    stack_operations(int size){
         this.size= size;
         stack =new int[size];
     }
@@ -90,7 +90,7 @@ public class stack_creation
         Scanner sc =new Scanner(System.in);
         System.out.println("Enter the size of stack :");
         int size=sc.nextInt();
-        stack_creation obj = new stack_creation(size);
+        stack_operations obj = new stack_operations(size);
         obj.push(10);
         obj.push(20);
         obj.push(30);
