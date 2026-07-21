@@ -29,6 +29,7 @@ public class duplicate {
         }
         }
         }
+        
         System.out.println("\nAfter removing duplicate elements in the array:");
         int flag=0;
         for(int i=0;i<n;i++){
