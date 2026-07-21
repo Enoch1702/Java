@@ -14,6 +14,7 @@ public class boundaryelement
                 a[i][j]=sc.nextInt();
             }
         }
+        
         for(int i=0;i<c;i++){
             System.out.print(a[0][i]+" ");
         }
