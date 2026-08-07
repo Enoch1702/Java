@@ -17,6 +17,10 @@ public class MovesZero{
                 index++;
             }
         }
+        while(index<arr.length){
+            result[index]=0;
+            index++;
+        }
         
         for(int k=0;k<n;k++){
             System.out.print(result[k]+" ");
