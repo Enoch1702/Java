@@ -14,7 +14,14 @@ public class boundaryelement
                 a[i][j]=sc.nextInt();
             }
         }
-        
+        System.out.println("Matrix ELements : ");
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                System.out.print(a[i][j]+" ");
+            }
+            System.out.println("");
+        }
+        System.out.print("Boundary Elements : ");
         for(int i=0;i<c;i++){
             System.out.print(a[0][i]+" ");
         }
