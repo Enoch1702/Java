@@ -1,4 +1,4 @@
-public class tree{
+public class BST{
     public static void main(String[] args) {
         Tree t=new Tree();
         t.root=new Node(20);
@@ -22,6 +22,7 @@ public class tree{
         System.out.println();
         System.out.print("LevelOrder : ");
         System.out.println(t.levelorder(t.root));
+        t.insert(t.root,50);
     }
 }
 class Node{
@@ -36,6 +37,28 @@ class Node{
 }
 class Tree{
     Node root=null;
+
+    Node insert(Node root,int data){
+        if(root==null){
+            return new Node(data);
+        }
+        if(data<root.data){
+            root.left=insert(root.left, data);
+        }
+        else{
+            root.right=insert(root.right, data);
+        }
+        return root;
+    }
+    
+    void dispTree(Node root){
+        if(root==null){
+            System.out.println("[]");
+            return;
+        }
+        
+    }
+
     void preorder(Node root){
         if(root==null){
             return;
@@ -44,6 +67,7 @@ class Tree{
         preorder(root.left);
         preorder(root.right);
     }
+
     void inorder(Node root){
         if(root==null){
             return;
@@ -52,6 +76,7 @@ class Tree{
         System.out.print(root.data+" ");
         inorder(root.right);
     }
+
     void postorder(Node root){
         if(root==null){
             return;
@@ -60,6 +85,7 @@ class Tree{
         postorder(root.right);
         System.out.print(root.data+" ");
     }
+
     void leafnode(Node root){
         if(root==null){
             return;
