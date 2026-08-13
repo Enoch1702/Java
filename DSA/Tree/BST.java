@@ -23,6 +23,11 @@ public class BST{
         System.out.print("LevelOrder : ");
         System.out.println(t.levelorder(t.root));
         t.insert(t.root,50);
+        System.out.println();
+        t.deleteNode(t.root, 18);
+        System.out.println();
+        System.out.print("Inorder : ");
+        t.inorder(t.root);
     }
 }
 class Node{
@@ -57,6 +62,37 @@ class Tree{
             return;
         }
         
+    }
+
+    public Node deleteNode(Node root, int data) {
+        if(root == null){
+            return null;
+        }
+        if(root.data > data){
+            root.left = deleteNode(root.left,data);
+        }
+        else if(root.data < data){
+            root.right = deleteNode(root.right,data);
+        }
+        else{
+            if(root.left == null && root.right == null){
+                return null;
+            }
+            if(root.left == null){
+                return root.right;
+            }
+            if(root.right == null){
+                return root.left;
+            }
+            Node temp = root.right;
+            
+            while(temp.left != null){
+                temp = temp.left;
+            }
+            root.data = temp.data;
+            root.right = deleteNode(root.right,temp.data);
+        }
+        return root;
     }
 
     void preorder(Node root){
@@ -108,6 +144,13 @@ class Tree{
         } 
         int lheight = levelorder(root.left);
         int rheight = levelorder(root.right);
-        return Math.max(lheight,rheight) + 1;
+        int level;
+        if(lheight>rheight){
+            level = lheight + 1;
+        }
+        else{
+            level = rheight + 1;
+        }
+        return level;
     }
 }
