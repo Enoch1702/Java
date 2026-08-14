@@ -11,7 +11,7 @@ public class del_front_end{
 
     void insertend(int data){
         Node newNode = new Node(data);
-        while(head==null){
+        if(head==null){
             head=newNode;
             return;
         }

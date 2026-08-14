@@ -56,14 +56,6 @@ class Tree{
         return root;
     }
     
-    void dispTree(Node root){
-        if(root==null){
-            System.out.println("[]");
-            return;
-        }
-        
-    }
-
     public Node deleteNode(Node root, int data) {
         if(root == null){
             return null;

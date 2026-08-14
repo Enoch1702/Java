@@ -11,7 +11,7 @@ public class del_at_spec_pos{
 
     void insertend(int data){
         Node newNode = new Node(data);
-        while(head==null){
+        if(head==null){
             head=newNode;
             return;
         }

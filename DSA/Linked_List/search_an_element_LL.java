@@ -12,7 +12,7 @@ public class search_an_element_LL
 
     void insertend(int data){
         Node newNode = new Node(data);
-        while(head==null){
+        if(head==null){
             head=newNode;
             return;
         }

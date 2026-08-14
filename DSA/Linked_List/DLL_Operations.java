@@ -107,7 +107,7 @@ public class DLL_Operations{
             head.next=null;
         }
         else{
-            for(int i=1;i<pos-1&&temp.next!=null;i++)//if(int i=1;i<p&&temp!=null;i+=)
+            for(int i=1;i<pos-1&&temp.next!=null;i++)//if(int i=1;i<p&&temp!=null;i++)
             {
                 temp=temp.next;
             }
